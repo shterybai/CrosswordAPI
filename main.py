@@ -1,18 +1,17 @@
 import gensim
 from gensim.models import Word2Vec
 from gensim.models import KeyedVectors
-import numpy as np
 import warnings
 import gensim.downloader as api
 from flask import *
 import json
 import io
 
-model = gensim.models.KeyedVectors.load_word2vec_format('venv/data/wiki-news-300d-1M.vec')
+# model = gensim.models.KeyedVectors.load_word2vec_format('venv/data/wiki-news-300d-1M.vec')
 
 # model = gensim.models.KeyedVectors.load_word2vec_format('venv/data/wiki-news-300d-1M.vec', encoding='unicode_escape')
 
-# model = gensim.models.KeyedVectors.load_word2vec_format('venv/data/GoogleNews-vectors-negative300.bin', binary=True)
+model = gensim.models.KeyedVectors.load_word2vec_format('venv/data/GoogleNews-vectors-negative300.bin', binary=True)
 
 # corpus = api.load('fasttext-wiki-news-subwords-300')
 # model = Word2Vec.load(corpus)
