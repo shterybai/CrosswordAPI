@@ -25,7 +25,7 @@ def request_page():
     words_query = str(request.args.get('user_words')) # localhost:7777/request?user_words=word1,word2,word3
     word_list = words_query.split(',')
 
-    sim_list = model.most_similar(positive=word_list, topn=250000)
+    sim_list = model.most_similar(positive=word_list, topn=50000)
 
     json_dump = json.dumps(sim_list)
 
